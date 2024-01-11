@@ -6,7 +6,8 @@ new Vue({
       numberOfPeople: 1,
       customTipPercentage: '',
       tipAmount: 0.00,
-      totalPerPerson: 0.00
+      totalPerPerson: 0.00,
+      selectedTip: 0 
     };
   },
   methods: {
@@ -15,7 +16,7 @@ new Vue({
 
       let tipPercentage = this.customTipPercentage || this.selectedTip;
       let tipAmount = (this.billAmount * (tipPercentage / 100)) / this.numberOfPeople;
-      tipAmount = Math.floor(tipAmount * 100) / 100;
+      tipAmount = Number(tipAmount.toFixed(2)); 
 
       let totalAmount = (tipAmount * this.numberOfPeople + parseFloat(this.billAmount)) / this.numberOfPeople;
 

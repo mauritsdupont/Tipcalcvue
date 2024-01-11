@@ -1,58 +1,66 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
+
 :root {
-  --Strong-cyan: hsl(172, 100%, 42%);
-  --Very-dark-cyan: hsl(183, 58%, 25%);
-  --Dark-grayish-cyan: hsl(185, 18%, 51%);
-  --Grayish-cyan: hsl(186, 21%, 49%);
-  --Light-grayish-cyan: hsl(185, 47%, 80%);
-  --Very-light-grayish-cyan: hsl(180, 35%, 91%);
-  --White: hsl(0, 0%, 100%);
+  --strong-cyan: hsl(172, 100%, 42%);
+  --very-dark-cyan: hsl(183, 58%, 25%);
+  --dark-grayish-cyan: hsl(185, 18%, 51%);
+  --grayish-cyan: hsl(186, 21%, 49%);
+  --light-grayish-cyan: hsl(185, 47%, 80%);
+  --very-light-grayish-cyan: hsl(180, 35%, 91%);
+  --white: hsl(0, 0%, 100%);
 }
+
 * {
   font-family: "Space Mono", monospace;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
+
 body {
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background-color: var(--Light-grayish-cyan);
+  background-color: var(--light-grayish-cyan);
   gap: 4rem;
 }
+
 .title {
-  color: var(--Very-dark-cyan);
+  color: var(--very-dark-cyan);
   text-transform: uppercase;
   letter-spacing: 3px;
 }
+
 .card {
-  background-color: var(--White);
+  background-color: var(--white);
   width: 700px;
   border-radius: 1rem;
 }
+
 .card-container {
   display: flex;
-
   padding: 2rem;
   gap: 2rem;
 }
+
 .inputs-section,
 .outputs-section {
   width: 50%;
   display: flex;
   flex-direction: column;
 }
+
 .outputs-section {
-  background-color: var(--Very-dark-cyan);
+  background-color: var(--very-dark-cyan);
   border-radius: 1rem;
   padding: 2rem;
 }
-.bill-sec,
-.tip-sec,
-.people-sec {
+
+.bill-section,
+.tip-section,
+.people-section {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
