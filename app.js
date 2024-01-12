@@ -14,11 +14,11 @@ new Vue({
     calculateTip() {
       if (this.billAmount === "" || this.numberOfPeople === "") return;
 
-      let tipPercentage = this.customTipPercentage || this.selectedTip;
-      let tipAmount = (this.billAmount * (tipPercentage / 100)) / this.numberOfPeople;
+      const tipPercentage = this.customTipPercentage || this.selectedTip;
+      const tipAmount = (this.billAmount * (tipPercentage / 100)) / this.numberOfPeople;
       tipAmount = Number(tipAmount.toFixed(2)); 
 
-      let totalAmount = (tipAmount * this.numberOfPeople + parseFloat(this.billAmount)) / this.numberOfPeople;
+      const totalAmount = (tipAmount * this.numberOfPeople + parseFloat(this.billAmount)) / this.numberOfPeople;
 
       this.tipAmount = tipAmount.toFixed(2);
       this.totalPerPerson = totalAmount.toFixed(2);

@@ -41,13 +41,14 @@ body {
 
 .card-container {
   display: flex;
+  flex-direction: column;
   padding: 2rem;
   gap: 2rem;
 }
 
 .inputs-section,
 .outputs-section {
-  width: 50%;
+  width: 100%; 
   display: flex;
   flex-direction: column;
 }
@@ -64,4 +65,16 @@ body {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+}
+
+
+@media screen and (max-width: 600px) {
+  .card {
+    width: 100%; 
+  }
+
+  .inputs-section,
+  .outputs-section {
+    padding: 1rem; 
+  }
 }
